@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harshitha Thakur · BI Developer & Data Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5fb;--fg:#17142b;--mut:#5d5a78;--card:#fff;--line:#e2dff0;--a:#6d4aff;--b:#00b3a4;--glow:rgba(109,74,255,.18);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b1a;--fg:#f0eeff;--mut:#a29fc2;--card:#161330;--line:#2a2650;--a:#8b6dff;--b:#2fe0cf;--glow:rgba(139,109,255,.25);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0b1a;--fg:#f0eeff;--mut:#a29fc2;--card:#161330;--line:#2a2650;--a:#8b6dff;--b:#2fe0cf;--glow:rgba(139,109,255,.25);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Space Grotesk',system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;overflow-x:hidden}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:20}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav a{color:var(--mut);text-decoration:none;font-size:.92rem}nav a:hover{color:var(--a)}
+@media(max-width:640px){nav ul{display:none}}
+section{padding:90px 5vw;max-width:1100px;margin:0 auto}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 10px}
+.eyebrow{color:var(--b);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;position:relative}
+.orb{position:absolute;right:-6vw;top:8%;width:min(46vw,420px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--a),transparent 62%),radial-gradient(circle at 70% 70%,var(--b),transparent 60%);filter:blur(46px);opacity:.55;animation:float 9s ease-in-out infinite;will-change:transform}
+@keyframes float{50%{transform:translateY(-26px) scale(1.06)}}
+.hero .mark{width:84px;height:84px;margin-bottom:22px;position:relative}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.05;margin:0 0 16px;position:relative}
+h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--mut);max-width:640px;position:relative}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;position:relative}
+.btn{padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid var(--line);color:var(--fg);transition:.25s}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px var(--glow)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.stat b{display:block;font-size:2.3rem;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--mut);font-size:.9rem}
+.reels{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:26px}
+.reel{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.reel svg{display:block;width:100%;height:auto;background:linear-gradient(160deg,color-mix(in srgb,var(--a) 14%,var(--card)),var(--card))}
+.reel p{margin:0;padding:14px 18px;font-size:.92rem;color:var(--mut)}.reel p b{color:var(--fg);display:block}
+.tl{border-left:2px solid var(--line);margin-top:26px;padding-left:26px}
+.job{position:relative;margin-bottom:38px}
+.job:before{content:"";position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 0 5px var(--glow)}
+.job h3{margin:0}.job small{color:var(--b);font-weight:700}
+.job ul{padding-left:18px;color:var(--mut);margin:10px 0 0}.job li{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px var(--glow);border-color:var(--a)}
+.card h3{margin:0 0 8px}.card p{color:var(--mut);margin:0 0 12px;font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font-size:.78rem;padding:4px 11px;border-radius:999px;background:var(--glow);color:var(--a);font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
+.lnk{display:inline-block;margin-top:14px;color:var(--a);font-weight:700;text-decoration:none}.lnk:hover{text-decoration:underline}
+.edu{margin-top:18px}.edu p{margin:0;padding:14px 0;border-bottom:1px solid var(--line)}.edu b{color:var(--fg)}.edu span{color:var(--mut)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;padding:90px 5vw 60px}
+footer a.big{font-size:clamp(1.2rem,4vw,2rem);color:var(--a);text-decoration:none;font-weight:700;word-break:break-all}
+footer small{display:block;margin-top:34px;color:var(--mut)}
+/* reel animations */
+.flow{stroke-dasharray:6 8;animation:dash 1.2s linear infinite}@keyframes dash{to{stroke-dashoffset:-28}}
+.bx{animation:mv 5s ease-in-out infinite alternate}.bx2{animation:mv2 6s ease-in-out infinite alternate}
+@keyframes mv{to{transform:translate(70px,16px)}}@keyframes mv2{to{transform:translate(-60px,-12px)}}
+.bar{transform-origin:bottom;transform-box:fill-box;animation:gr 2.4s ease-in-out infinite alternate}
+.bar:nth-child(2){animation-delay:.3s}.bar:nth-child(3){animation-delay:.6s}.bar:nth-child(4){animation-delay:.9s}.bar:nth-child(5){animation-delay:1.2s}
+@keyframes gr{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+.pulse{animation:pl 2s ease-in-out infinite}@keyframes pl{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav>
+ <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><use href="#ht"/></svg>Harshitha Thakur</a>
+ <ul><li><a href="#impact">Impact</a></li><li><a href="#systems">Systems</a></li><li><a href="#work">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6dff"/><stop offset="1" stop-color="#2fe0cf"/></linearGradient>
+ <symbol id="ht" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#g)"/><path d="M30 28v44M30 50h40M70 28v44" stroke="#0d0b1a" stroke-width="9" stroke-linecap="round" fill="none"/><circle cx="70" cy="28" r="6" fill="#fff"/></symbol>
+</defs></svg>
+
+<section class="hero" id="top">
+ <div class="orb" data-par="0.15"></div>
+ <svg class="mark" viewBox="0 0 100 100" aria-label="HT monogram logo"><use href="#ht"/></svg>
+ <p class="eyebrow">BI Developer · Data Scientist · Bengaluru</p>
+ <h1>I turn messy data into <span>decisions and AI that ships.</span></h1>
+ <p class="sub">MSc Data Science (Birkbeck, University of London). I build analytics platforms, data pipelines and computer-vision systems for healthcare, supporting 25+ facilities and 100+ camera deployments.</p>
+ <div class="cta"><a class="btn p" href="#projects">See my work</a><a class="btn" href="mailto:harshithathakur9845@gmail.com">Get in touch</a></div>
+</section>
+
+<section id="impact">
+ <p class="eyebrow reveal">Impact in numbers</p><h2 class="reveal">Results, not just responsibilities</h2>
+ <div class="stats">
+  <div class="stat reveal"><b data-n="25" data-s="+">0</b><span>healthcare facilities supported</span></div>
+  <div class="stat reveal"><b data-n="100" data-s="+">0</b><span>CCTV deployments analysed</span></div>
+  <div class="stat reveal"><b data-n="20.3" data-s="M+" data-d="1">0</b><span>records in my lakehouse pipeline</span></div>
+  <div class="stat reveal"><b data-n="10" data-s="">0</b><span>team members supported and coordinated in Quality Control</span></div>
+  <div class="stat reveal"><b data-n="50" data-s="%">0</b><span>less manual reporting effort</span></div>
+  <div class="stat reveal"><b data-n="39" data-s="%">0</b><span>faster Spark processing</span></div>
+ </div>
+</section>
+
+<section id="systems">
+ <p class="eyebrow reveal">Systems in action</p><h2 class="reveal">How my work flows</h2>
+ <div class="reels">
+  <div class="reel reveal">
+   <svg viewBox="0 0 320 180" role="img" aria-label="Animated data pipeline">
+    <g font-size="11" fill="currentColor" text-anchor="middle" style="color:var(--fg)">
+     <rect x="14" y="62" width="52" height="34" rx="9" fill="none" stroke="#8b6dff" stroke-width="2"/><text x="40" y="83">Raw</text>
+     <rect x="92" y="62" width="52" height="34" rx="9" fill="none" stroke="#8b6dff" stroke-width="2"/><text x="118" y="83">Bronze</text>
+     <rect x="170" y="62" width="52" height="34" rx="9" fill="none" stroke="#2fe0cf" stroke-width="2"/><text x="196" y="83">Silver</text>
+     <rect x="248" y="62" width="58" height="34" rx="9" fill="#2fe0cf" opacity=".9"/><text x="277" y="83" style="fill:#0d0b1a;font-weight:700">Gold</text>
+     <rect x="170" y="128" width="52" height="30" rx="9" fill="none" stroke="#ff6b81" stroke-width="2"/><text x="196" y="147">Quarantine</text>
+    </g>
+    <g stroke="#8b6dff" stroke-width="2" fill="none" class="flow"><path d="M66 79H92M144 79H170M222 79H248"/><path d="M196 96V128" stroke="#ff6b81"/></g>
+    <circle cx="40" cy="30" r="5" fill="#2fe0cf" class="pulse"/><text x="54" y="34" font-size="11" style="fill:var(--mut)">20.3M records flowing</text>
+   </svg>
+   <p><b>Lakehouse pipeline</b>Raw to Gold with automated validation and quarantine.</p>
+  </div>
+  <div class="reel reveal">
+   <svg viewBox="0 0 320 180" role="img" aria-label="Animated computer vision detection">
+    <rect x="0" y="130" width="320" height="50" fill="#8b6dff" opacity=".12"/>
+    <g class="bx"><rect x="40" y="40" width="64" height="86" rx="6" fill="none" stroke="#2fe0cf" stroke-width="2.5"/><rect x="40" y="26" width="54" height="14" rx="4" fill="#2fe0cf"/><text x="45" y="37" font-size="10" style="fill:#0d0b1a;font-weight:700">patient 0.94</text></g>
+    <g class="bx2"><rect x="200" y="50" width="60" height="76" rx="6" fill="none" stroke="#8b6dff" stroke-width="2.5"/><rect x="200" y="36" width="48" height="14" rx="4" fill="#8b6dff"/><text x="205" y="47" font-size="10" fill="#fff" font-weight="700">staff 0.91</text></g>
+    <circle cx="288" cy="22" r="5" fill="#ff6b81" class="pulse"/><text x="276" y="40" font-size="9" style="fill:var(--mut)">LIVE</text>
+   </svg>
+   <p><b>Computer vision</b>YOLO-based patient and staff event detection on GPU.</p>
+  </div>
+  <div class="reel reveal">
+   <svg viewBox="0 0 320 180" role="img" aria-label="Animated dashboard bars">
+    <g fill="#8b6dff"><rect class="bar" x="30" y="40" width="34" height="110" rx="6"/><rect class="bar" x="88" y="60" width="34" height="90" rx="6" fill="#2fe0cf"/><rect class="bar" x="146" y="30" width="34" height="120" rx="6"/><rect class="bar" x="204" y="75" width="34" height="75" rx="6" fill="#2fe0cf"/><rect class="bar" x="262" y="50" width="34" height="100" rx="6"/></g>
+    <path d="M10 150H310" stroke="currentColor" style="color:var(--line)" stroke-width="2"/>
+   </svg>
+   <p><b>Operational dashboards</b>Patient flow, staff utilisation and KPIs in Superset.</p>
+  </div>
+ </div>
+</section>
+
+<section id="work">
+ <p class="eyebrow reveal">Experience</p><h2 class="reveal">Where I have made an impact</h2>
+ <div class="tl">
+  <div class="job reveal"><h3>BI Developer & Data Scientist, Reformmed</h3><small>Feb 2025 – Jul 2026 · Bengaluru</small>
+   <ul><li>Designed and built an end-to-end computer-vision application for healthcare quality control.</li><li>Built Python/SQL ETL workflows and Apache Superset dashboards for patient flow, staffing and compliance KPIs.</li><li>Cut manual tracking effort by 50% through automation, and development effort by 40% with reusable parameterised PostgreSQL templates.</li><li>Supported and coordinated a Quality Control team of 10 members, including data analysts, improving annotated dataset accuracy and scalable machine-learning workflows.</li><li>Built computer-vision dataset generation and annotation pipelines with Roboflow and Grounding DINO for scalable object-detection development.</li><li>Monitored ML and GenAI model outputs, investigated performance issues and improved the reliability of production analytics and AI workflows.</li><li>Analysed patient journey, wait-time and workforce data across ER wards and dialysis centres, and built monitoring workflows for crowd density, compliance and service efficiency.</li><li>Partnered with engineering, clinical and operations teams to turn business requirements into pipelines, dashboards, analytics and AI solutions.</li></ul></div>
+  <div class="job reveal"><h3>Business Analyst, KultureHire</h3><small>Jun – Jul 2023 · Bengaluru</small>
+   <ul><li>Built Power BI KPI dashboards and interactive reports, charts and graphs to support decision-making.</li><li>Used SQL queries and Excel (pivot tables, formulae, forecasting) for analysis, improving reporting accuracy by 30%.</li></ul></div>
+  <div class="job reveal"><h3>Moderator / Community Manager, Modak</h3><small>Dec 2022 – Apr 2023 · Bengaluru</small>
+   <ul><li>Moderated a Discord community: answered user questions, managed channels and enforced rules.</li><li>Gave end-of-shift feedback from social listening to help shape the product.</li></ul></div>
+  <div class="job reveal"><h3>Junior Software Engineer, RLE International Group</h3><small>Aug 2021 – Nov 2022</small>
+   <ul><li>Automated HR and business processes with Power Automate, saving 40% manual effort, and built internal dashboards for leadership.</li><li>Built SharePoint web parts, forms, workflows (SharePoint 2013) and InfoPath forms, and a custom SharePoint page with dashboard reports.</li><li>Managed user access control and permissions to protect data confidentiality and integrity.</li></ul></div>
+  <div class="job reveal"><h3>GNSS Trainee, Elena Geo Systems</h3><small>Nov – Dec 2020 · Bengaluru</small>
+   <ul><li>Worked with GNSS receivers and software for data gathering and processing for precise location, surveying and mapping.</li></ul></div>
+  <div class="job reveal"><h3>Intern, Versabyte Data Systems</h3><small>Jul – Aug 2019 · Bengaluru</small>
+   <ul><li>Designed and tested power modules from customer requirements, and presented module features and benefits.</li></ul></div>
+ </div>
+</section>
+
+<section id="projects">
+ <p class="eyebrow reveal">Selected projects</p><h2 class="reveal">Things I have built</h2>
+ <div class="grid">
+  <div class="card reveal"><h3>NYC Taxi Lakehouse</h3><p>End-to-end lakehouse over 20.3M+ NYC taxi records across Raw, Bronze, Silver/Quarantine and Gold layers. Automated validation kept 20.0M+ clean records and isolated 316K+ invalid ones for audit. Airflow orchestrates ingestion, taxi-zone enrichment and curated Gold datasets, served through PostgreSQL and Superset with automated dashboard provisioning. Ollama powers natural-language analytics (105 chatbot tests). Containerised with Docker, with automated tests and GitHub Actions CI. Median runtime cut from 59.92s to 36.36s (~39%).</p><div class="tags"><span>PySpark</span><span>Iceberg</span><span>Parquet</span><span>Airflow</span><span>MinIO</span><span>PostgreSQL</span><span>Superset</span><span>Ollama</span><span>Docker</span><span>GitHub Actions</span></div><a class="lnk" href="https://github.com/harshitha-108/nyc-taxi-lakehouse" target="_blank" rel="noopener">View on GitHub →</a></div>
+  <div class="card reveal"><h3>Healthcare Occupancy Intelligence</h3><p>Distributed AI system combining object detection, segmentation, occupancy modelling, temporal reasoning and activity analytics for healthcare workflow automation. Fuses YOLO-based models with dynamic ROI tracking, occupancy state estimation, texture analysis and spatial interaction modelling. GPU inference with batch processing, asynchronous orchestration and multi-process analytics, plus MLOps-ready event generation with evidence collection, audit logging and metadata indexing.</p><div class="tags"><span>PyTorch</span><span>CUDA</span><span>YOLO</span><span>OpenCV</span></div></div>
+  <div class="card reveal"><h3>CineSense</h3><p>NLP sentiment analyser for YouTube data that surfaces audience emotions, engagement trends and content-performance insights. Multiprocessing Python pipelines reduced processing and analytics time by 50%.</p><div class="tags"><span>NLP</span><span>Python</span><span>Multiprocessing</span></div></div>
+  <div class="card reveal"><h3>OrgLens</h3><p>Compared rule-based and learned ranking approaches to infer organisational reporting relationships, with abstention and structural validation.</p><div class="tags"><span>Ranking</span><span>Evaluation</span></div><a class="lnk" href="https://github.com/harshitha-108/orglens-org-inference" target="_blank" rel="noopener">View on GitHub →</a></div>
+  <div class="card reveal"><h3>Healthcare &amp; Service Analytics Monitoring</h3><p>Real-time analytics across 25+ hospitals using operational and video-stream data from 100+ CCTV deployments. Analysed patient journey, wait-time and workforce data to find bottlenecks in ER wards and dialysis centres, with monitoring for crowd density, compliance and service efficiency.</p><div class="tags"><span>SQL</span><span>Superset</span><span>Operational analytics</span></div></div>
+  <div class="card reveal"><h3>Analytics Dashboard SQL Automation</h3><p>Reusable PostgreSQL templates with parameterised filters that cut dashboard development and reporting configuration time by 40%, and standardised reporting structures across multiple business locations.</p><div class="tags"><span>PostgreSQL</span><span>Automation</span><span>Dashboards</span></div></div>
+  <div class="card reveal"><h3>Piazza, Cloud SaaS Platform</h3><p>Scalable SaaS platform with backend APIs and engagement tracking, deployed with Docker- and Kubernetes-based workflows for consistency and scalability.</p><div class="tags"><span>Node.js</span><span>MongoDB</span><span>GCP</span><span>Docker</span><span>Kubernetes</span></div></div>
+ </div>
+</section>
+
+<section id="skills">
+ <p class="eyebrow reveal">Toolbox</p><h2 class="reveal">Skills</h2>
+ <div class="skills">
+  <div class="card reveal"><h3>Analytics & BI</h3><div class="tags"><span>SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Power BI</span><span>Apache Superset</span><span>Excel</span><span>KPI reporting</span><span>Statistical analysis</span><span>Data modelling</span><span>Data visualisation</span></div></div>
+  <div class="card reveal"><h3>Data engineering</h3><div class="tags"><span>ETL/ELT</span><span>Airflow</span><span>PySpark</span><span>Iceberg</span><span>Parquet</span><span>MinIO</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Cassandra</span><span>Batch processing</span><span>Data quality</span><span>Data governance</span></div></div>
+  <div class="card reveal"><h3>ML & AI</h3><div class="tags"><span>PyTorch</span><span>scikit-learn</span><span>Deep learning</span><span>YOLOv8</span><span>OpenCV</span><span>CUDA</span><span>Grounding DINO</span><span>Roboflow</span><span>NLP</span><span>LLM integration</span><span>Ollama</span><span>Foundation models</span><span>Flask</span><span>Model monitoring</span></div></div>
+  <div class="card reveal"><h3>Cloud & delivery</h3><div class="tags"><span>GCP</span><span>Docker</span><span>Kubernetes</span><span>Git</span><span>GitHub Actions</span><span>Node.js</span><span>Agile/Scrum</span><span>Stakeholder management</span><span>Cross-functional leadership</span></div></div>
+ </div>
+ <p class="eyebrow reveal" style="margin-top:70px">Education</p><h2 class="reveal">Education, certifications &amp; publication</h2>
+ <div class="edu reveal"><p><b>MSc Data Science</b> <span>· Birkbeck, University of London · 2024–2025</span></p><p><b>BE Electronics &amp; Communication Engineering</b> <span>· Atria Institute of Technology · 2016–2020</span></p><p><b>Certifications</b> <span>· Microsoft Power Platform Fundamentals · Introduction to SQL · Python Development Trainee · Business Analyst Learnternship · Copilot</span></p><p><b>IoT Based Smart Health-Care System</b> <span>· Co-author · IJERA · 2020</span></p></div>
+</section>
+
+<footer id="contact">
+ <svg width="64" height="64" viewBox="0 0 100 100" aria-hidden="true"><use href="#ht"/></svg>
+ <p class="eyebrow">Let’s work together</p>
+ <a class="big" href="mailto:harshithathakur9845@gmail.com">harshithathakur9845@gmail.com</a>
+ <div class="cta" style="justify-content:center"><a class="btn p" href="https://www.linkedin.com/in/harshitha-thakur" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/harshitha-108" target="_blank" rel="noopener">GitHub</a></div>
+ <small>© 2026 Harshitha Thakur · Bengaluru, India</small>
+</footer>
+
+<script>
+(function(){
+ var bar=document.getElementById('bar'),orb=document.querySelector('.orb');
+ function sc(){var h=document.documentElement.scrollHeight-innerHeight,y=scrollY;bar.style.width=(h>0?y/h*100:0)+'%';if(orb)orb.style.transform='translateY('+(y*0.15)+'px)'}
+ addEventListener('scroll',sc,{passive:true});sc();
+ function count(el){var t=parseFloat(el.dataset.n),d=+el.dataset.d||0,s=el.dataset.s||'',t0=null;
+  function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(d)+s;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});document.querySelectorAll('[data-n]').forEach(function(e){e.textContent=e.dataset.n+(e.dataset.s||'')});return}
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');var n=x.target.querySelector('[data-n]');if(n)count(n);io.unobserve(x.target)}})},{threshold:.18});
+ els.forEach(function(e,i){e.style.transitionDelay=(i%3)*90+'ms';io.observe(e)});
+})();
+</script>
+</body>
+</html>
